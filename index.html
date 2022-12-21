@@ -12,12 +12,22 @@
     <div id="app">
 
         <main>
+            <div v-if="(listRandomEmail.length == 10) && (listRandomEmail.length != null)">
+                <div v-for="mail in listRandomEmail">
+                    <p>{{mail.mail}}</p>
+                </div>
+            </div>
             
+            <div v-else>
+                <p>ATTENDI CREAZIONE DELLA LISTA!</p>
+            </div>
+        
         </main>
 
 
 
     </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js'></script>
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script type="text/javascript" src="./js/script.js"></script>
 </body>
